@@ -13,18 +13,27 @@ public class Converter {
 	 do {
 		 mainMenuSelection = menu();
 		 input.setMainMenuSelection(mainMenuSelection);
+		 
 		 // User chose volume conversion
 		 if(mainMenuSelection ==1) {
-			// Selecting First Unit
-			 System.out.println("Please Choose Converting Unit:");
-			 firstUnitSelection = volumeConversionMenu();
+			 
+			// Selecting First Unit 
+			 do {
+				 System.out.println("Please Choose Converting Unit:");
+				 firstUnitSelection = volumeConversionMenu();
+			 }while(firstUnitSelection <= 0|| firstUnitSelection>=6);
 			 input.setFirstUnitSelection(firstUnitSelection);
+			 
 			// Check for quit
 			 if(firstUnitSelection !=5) {
+				 
 				// Selecting Second Unit
-				 System.out.println("Please Choose Unit to Convert to:");
-				 secondUnitSelection = volumeConversionMenu();
+				 do {
+					 System.out.println("Please Choose Unit to Convert to:");
+					 secondUnitSelection = volumeConversionMenu();
+				 }while(secondUnitSelection <= 0|| secondUnitSelection>=6);
 				 input.setSecondUnitSelection(secondUnitSelection);
+				 
 				// Check for quit
 				 if(secondUnitSelection != 5) {
 					 getInput(input);
@@ -36,16 +45,24 @@ public class Converter {
 		 }
 		 // User chose distance conversion
 		 else if(mainMenuSelection == 2) {
+			 
 			 // Selecting First Unit
-			 System.out.println("Please Choose Converting Unit:");
-			 firstUnitSelection = distanceConversionMenu();
+			 do {
+				 System.out.println("Please Choose Converting Unit:");
+				 firstUnitSelection = distanceConversionMenu();
+			 }while(firstUnitSelection <= 0|| firstUnitSelection>=6);
 			 input.setFirstUnitSelection(firstUnitSelection);
+			 
 			 // Check for quit
 			 if(firstUnitSelection !=5) {
+				 
 				// Selecting Second Unit
-				 System.out.println("Please Choose Unit to Convert to:");
-				 secondUnitSelection = distanceConversionMenu();
+				 do {
+					 System.out.println("Please Choose Unit to Convert to:");
+					 secondUnitSelection = distanceConversionMenu();
+				 }while(secondUnitSelection <= 0|| secondUnitSelection>=6);
 				 input.setSecondUnitSelection(secondUnitSelection);
+				 
 				// Check for quit
 				 if(secondUnitSelection != 5) {
 					 getInput(input);
