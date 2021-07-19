@@ -56,7 +56,7 @@ public class UserInput {
 				type = "Cubic Feet";
 				break;
 			case 4:
-				type = "Imperial Cup";
+				type = "Imperial Cups";
 				break;
 			}
 			break;
@@ -69,7 +69,7 @@ public class UserInput {
 				type = "Meters";
 				break;
 			case 3: 
-				type = "Mile";
+				type = "Miles";
 				break;
 			case 4:
 				type = "Kilometers";
@@ -94,7 +94,7 @@ public class UserInput {
 				type = "Cubic Feet";
 				break;
 			case 4:
-				type = "Imperial Cup";
+				type = "Imperial Cups";
 				break;
 			}
 			break;
@@ -107,7 +107,7 @@ public class UserInput {
 				type = "Meters";
 				break;
 			case 3: 
-				type = "Mile";
+				type = "Miles";
 				break;
 			case 4:
 				type = "Kilometers";

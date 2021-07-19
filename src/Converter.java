@@ -13,14 +13,19 @@ public class Converter {
 	 do {
 		 mainMenuSelection = menu();
 		 input.setMainMenuSelection(mainMenuSelection);
+		 // User chose volume conversion
 		 if(mainMenuSelection ==1) {
+			// Selecting First Unit
 			 System.out.println("Please Choose Converting Unit:");
 			 firstUnitSelection = volumeConversionMenu();
 			 input.setFirstUnitSelection(firstUnitSelection);
+			// Check for quit
 			 if(firstUnitSelection !=5) {
+				// Selecting Second Unit
 				 System.out.println("Please Choose Unit to Convert to:");
 				 secondUnitSelection = volumeConversionMenu();
 				 input.setSecondUnitSelection(secondUnitSelection);
+				// Check for quit
 				 if(secondUnitSelection != 5) {
 					 getInput(input);
 					 convertVolume(input);
@@ -29,14 +34,19 @@ public class Converter {
 			 }
 			 
 		 }
+		 // User chose distance conversion
 		 else if(mainMenuSelection == 2) {
+			 // Selecting First Unit
 			 System.out.println("Please Choose Converting Unit:");
 			 firstUnitSelection = distanceConversionMenu();
 			 input.setFirstUnitSelection(firstUnitSelection);
+			 // Check for quit
 			 if(firstUnitSelection !=5) {
+				// Selecting Second Unit
 				 System.out.println("Please Choose Unit to Convert to:");
 				 secondUnitSelection = distanceConversionMenu();
 				 input.setSecondUnitSelection(secondUnitSelection);
+				// Check for quit
 				 if(secondUnitSelection != 5) {
 					 getInput(input);
 					 convertDistance(input);
@@ -53,6 +63,7 @@ public class Converter {
  public static int menu() 
  {
 	 Scanner menuSelection = new Scanner(System.in);
+	 // Main menu options
 	 System.out.println("Please Select an Option:");
 		 System.out.println("1. Volume Conversions");
 		 System.out.println("2. Distance Conversions");
@@ -64,29 +75,32 @@ public class Converter {
  
  public static int volumeConversionMenu() {
 	 Scanner menuSelection = new Scanner(System.in);
-		 System.out.println("1. US Gallons");
-		 System.out.println("2. Liters");
-		 System.out.println("3. Cubic Feet");
-		 System.out.println("4. Imperial Cup");
-		 System.out.println("5. Quit");
-		 int selection = menuSelection.nextInt();
+	 // Volume menu options
+	 System.out.println("1. US Gallons");
+	 System.out.println("2. Liters");
+	 System.out.println("3. Cubic Feet");
+	 System.out.println("4. Imperial Cup");
+	 System.out.println("5. Quit");
+	 int selection = menuSelection.nextInt();
 		 
 	 return selection;
 
  }
  public static int distanceConversionMenu() {
 	 Scanner menuSelection = new Scanner(System.in);
-		 System.out.println("1. Feet");
-		 System.out.println("2. Meters");
-		 System.out.println("3. Miles");
-		 System.out.println("4. Kilometers");
-		 System.out.println("5. Quit");
-		 int selection = menuSelection.nextInt();
+	 // Distance menu options
+	 System.out.println("1. Feet");
+	 System.out.println("2. Meters");
+	 System.out.println("3. Miles");
+	 System.out.println("4. Kilometers");
+	 System.out.println("5. Quit");
+	 int selection = menuSelection.nextInt();
 		 
 	 return selection;
 
  }
  
+ // Collects user value input
  public static void getInput(UserInput input)
  {
 	 Scanner inputValue = new Scanner(System.in);
